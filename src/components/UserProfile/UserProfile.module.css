@@ -1,0 +1,56 @@
+.profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #000;
+    color: white;
+    width: 100%;
+}
+
+.userInfo {
+    flex: 1;
+    font-size: 25px;
+}
+
+.userInfo p {
+    margin: 10px 0;
+}
+
+.userInfo span {
+    font-weight: bold;
+    color: #aaa;
+    margin-right: 5px;
+}
+
+.avatarSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatarImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    margin-bottom: 10px;
+}
+
+.changeAvatarButton, .changeProfileButton {
+    padding: 8px 16px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F14141;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.changeAvatarButton:hover, .changeProfileButton:hover {
+    background-color: black;
+}

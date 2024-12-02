@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    color: #878787;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navButton:hover {
+    color: white;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.searchInput {
+    padding: 8px;
+    width: 50px;
+    height: 39px;
+    border-radius: 5px;
+    border: 2px solid #F14141;
+    background-color: #222;
+    color: #bdd1d4;
+}
+
+.authButton {
+    padding: 8px 16px;
+    width: 96px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #F14141;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.authButton:hover {
+    background-color: black;
+}
+
+.logoLink {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+

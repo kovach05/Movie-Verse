@@ -1,0 +1,58 @@
+.movieList {
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+.movieList h2 {
+    margin-bottom: 20px;
+    font-size: 28.8px;
+    color: #aaa;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movieCard {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.movieCard:hover {
+    transform: translateY(-5px);
+}
+
+.movieImage {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #F14141;
+}
+
+.movieInfo {
+    padding: 10px;
+}
+
+.movieInfo h3 {
+    margin: 10px 0;
+    font-size: 19.2px;
+    color: #fff;
+}
+
+.movieInfo p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.stars {
+    color: #f8e825;
+}
