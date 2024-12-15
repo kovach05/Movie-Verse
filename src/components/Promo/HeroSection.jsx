@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from './HeroSection.module.css';
+import PropTypes from "prop-types";
 
 const HeroSection = ({ title, description, imageUrl }) => {
     const handleWatchNow = () => {
@@ -17,12 +17,12 @@ const HeroSection = ({ title, description, imageUrl }) => {
     };
 
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero}> {/* Використовуємо hero, а не hero-section */}
             <img src={imageUrl} alt="Hero" className={styles.image} />
             <div className={styles.text}>
                 <h1>{title}</h1>
                 <p>{description}</p>
-                <div className={styles.buttonGroup}>
+                <div className={styles.buttonGroup}> {/* Використовуємо правильний клас buttonGroup */}
                     <button
                         onClick={handleWatchNow}
                         className={`${styles.heroButton} ${styles.primary}`}
@@ -39,6 +39,12 @@ const HeroSection = ({ title, description, imageUrl }) => {
             </div>
         </section>
     );
+};
+
+HeroSection.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
 };
 
 export default HeroSection;

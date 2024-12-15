@@ -1,13 +1,12 @@
-// src/components/SignInForm.js
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from '../../axios';  // Імпортуємо налаштований axios
+import axios from '../../axios';
 import styles from './SignInForm.module.css';
+import {useState} from "react";
 
 const SignInForm = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        email: '',
+        username: '',
         password: '',
     });
     const [error, setError] = useState(null);
@@ -22,13 +21,13 @@ const SignInForm = () => {
 
         try {
             const response = await axios.post('auth/login', {
-                email: formData.email,
+                username: formData.username,
                 password: formData.password,
             });
             console.log('Login success:', response.data);
-            localStorage.setItem('authToken', response.data.token); // Зберігаємо токен
+            localStorage.setItem('authToken', response.data.token);
             navigate('/'); // Перенаправлення на головну сторінку
-        } catch (err) {
+        } catch {
             setError("Login failed. Please check your credentials.");
         }
     };
@@ -37,11 +36,11 @@ const SignInForm = () => {
         <div className={styles.signInContainer}>
             <h2>Sign In</h2>
             <form onSubmit={handleSubmit} className={styles.signInForm}>
-                <label> Email
+                <label> Username
                     <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
+                        type="username"
+                        name="username"
+                        value={formData.username}
                         onChange={handleChange}
                         required
                     />
@@ -59,7 +58,7 @@ const SignInForm = () => {
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <p className={styles.registerText}>
-                Don't have an account? <a href="/register" className={styles.registerLink}>Register</a>
+                Dont have an account? <a href="/register" className={styles.registerLink}>Register</a>
             </p>
         </div>
     );

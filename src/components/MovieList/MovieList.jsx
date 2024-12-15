@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import styles from './MovieList.module.css';
+import { Component } from "react";
 
 class MovieList extends Component {
     render() {
@@ -42,7 +42,6 @@ class MovieList extends Component {
                 </div>
                 <button className={styles.button}>Load More Movies</button>
 
-                {/* Секція для мультфільмів */}
                 <h2>Cartoons</h2>
                 <div className={styles.movies}>
                     {cartoons.map((cartoon, index) => (
@@ -59,7 +58,6 @@ class MovieList extends Component {
                 </div>
                 <button className={styles.button}>Load More Cartoons</button>
 
-                {/* Секція для аніме */}
                 <h2>Anime</h2>
                 <div className={styles.movies}>
                     {anime.map((animeItem, index) => (

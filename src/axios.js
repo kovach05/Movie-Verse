@@ -1,6 +1,19 @@
-// src/axios.js
-
 import axios from 'axios';
+
+const testConnection = async () => {
+    try {
+        const response = await axios.get('http://localhost:5233/health'); // Ендпоінт для перевірки
+        console.log('Server is connected:', response.data);
+    } catch (error) {
+        console.error('Failed to connect to the server:', error.message);
+    }
+};
+
+testConnection()
+    .then(() => console.log('Connection check completed'))
+    .catch(err => console.error('Error during connection check:', err));
+
+
 
 // Налаштуйте базовий URL для вашого API
 const axiosInstance = axios.create({

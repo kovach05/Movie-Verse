@@ -1,22 +1,28 @@
+/* Загальний стиль списку фільмів */
 .movieList {
     padding: 20px;
     background-color: #000;
     color: white;
     text-align: center;
+    min-height: 100vh; /* Щоб сторінка займала весь екран */
 }
 
 .movieList h2 {
     margin-bottom: 20px;
-    font-size: 28.8px;
+    font-size: 29px;
     color: #aaa;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Сітка для відображення фільмів */
 .movies {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    justify-content: center;
 }
 
+/* Картка одного фільму */
 .movieCard {
     background-color: #333;
     border-radius: 8px;
@@ -24,27 +30,35 @@
     text-align: center;
     color: white;
     box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movieCard:hover {
     transform: translateY(-5px);
+    box-shadow: 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* Зображення постера */
 .movieImage {
     width: 100%;
-    height: auto;
+    height: 300px; /* Фіксована висота для уніфікації вигляду */
+    object-fit: cover; /* Щоб постер не спотворювався */
     border-bottom: 3px solid #F14141;
 }
 
+/* Інформація про фільм */
 .movieInfo {
     padding: 10px;
+    font-family: 'Arial', sans-serif;
 }
 
 .movieInfo h3 {
     margin: 10px 0;
-    font-size: 19.2px;
+    font-size: 18px;
     color: #fff;
+    font-weight: bold;
+    text-transform: capitalize; /* Назви фільмів будуть з великої літери */
+    line-height: 1.2;
 }
 
 .movieInfo p {
@@ -53,6 +67,28 @@
     color: #aaa;
 }
 
+/* Рейтинг зірками */
 .stars {
     color: #f8e825;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Додаткові стилі для адаптивності */
+@media (max-width: 768px) {
+    .movies {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .movieImage {
+        height: 250px;
+    }
+
+    .movieInfo h3 {
+        font-size: 16px;
+    }
+
+    .movieInfo p {
+        font-size: 14px;
+    }
 }

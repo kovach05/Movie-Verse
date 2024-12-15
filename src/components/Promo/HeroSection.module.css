@@ -30,19 +30,11 @@
     border-radius: 8px;
 }
 
-.hero-section {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 30%;
-    height: auto;
-}
-
-.button-group {
+.buttonGroup {
     margin-top: 24px;
 }
 
-.hero-button.primary {
+.heroButton.primary {
     width: 213px;
     height: 75px;
     background-color: #F14141;
@@ -55,11 +47,11 @@
     transition: background-color 0.3s ease;
 }
 
-.hero-button.primary:hover {
+.heroButton.primary:hover {
     background-color: black;
 }
 
-.hero-button.secondary {
+.heroButton.secondary {
     width: 132px;
     height: 75px;
     background-color: black;
@@ -71,6 +63,6 @@
     transition: background-color 0.3s ease;
 }
 
-.hero-button.secondary:hover {
+.heroButton.secondary:hover {
     background-color: #F14141;
 }
